@@ -1,0 +1,26 @@
+{
+  "name": "backend-journey-32-week",
+  "version": "2.0.0",
+  "description": "Personal 32-Week Backend Engineering Learning & Career Development Platform. Designed for transitioning ERP software development experience into senior backend engineering competence in .NET 9, C#, SQL Server, Clean Architecture, and DSA.",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node test-data-validation.mjs"
+  },
+  "keywords": [
+    "backend",
+    "csharp",
+    "dotnet",
+    "aspnetcore",
+    "sqlserver",
+    "clean-architecture",
+    "distributed-systems",
+    "dsa",
+    "ai-mentor",
+    "career-development",
+    "pwa"
+  ],
+  "author": "Sujal Padiya",
+  "license": "MIT"
+}

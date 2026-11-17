@@ -1,0 +1,185 @@
+/* ==========================================================================
+   Base CSS - Design Tokens, Typography & Reset (Wide Responsive Workspace)
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Calm, Warm, Professional */
+  --bg-page: #FBFBF9;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F6F7F3;
+  --bg-elevated: #FFFFFF;
+  --bg-interactive: #F0F4F2;
+
+  /* Text Colors */
+  --text-primary: #0F172A;     /* Deep slate / navy */
+  --text-secondary: #334155;   /* Slate neutral */
+  --text-muted: #64748B;       /* Muted grey */
+  --text-faint: #94A3B8;       /* Subtle text */
+  --text-inverse: #FFFFFF;
+
+  /* Accents - Muted Teal */
+  --accent-primary: #0D9488;
+  --accent-hover: #0F766E;
+  --accent-light: #F0FDFA;
+  --accent-border: #99F6E4;
+  --accent-ring: rgba(13, 148, 136, 0.2);
+
+  /* Milestones / Highlights - Restrained Warm Amber */
+  --milestone-accent: #D97706;
+  --milestone-light: #FEF3C7;
+  --milestone-border: #FDE68A;
+
+  /* Status Colors */
+  --status-not-started: #94A3B8;
+  --status-learning: #0284C7;
+  --status-learning-bg: #E0F2FE;
+  --status-practising: #D97706;
+  --status-practising-bg: #FEF3C7;
+  --status-revision: #DC2626;
+  --status-revision-bg: #FEE2E2;
+  --status-completed: #059669;
+  --status-completed-bg: #D1FAE5;
+  --status-mastered: #7C3AED;
+  --status-mastered-bg: #EDE9FE;
+
+  /* Borders & Dividers - Minimal & Soft */
+  --border-subtle: #E2E8F0;
+  --border-light: #EBECE8;
+  --border-medium: #CBD5E1;
+
+  /* Shadows - Minimal & Soft */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Sizing & Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+
+  /* Spacing Scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Layout */
+  --nav-height: 60px;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-page);
+  overflow-x: hidden;
+}
+
+/* Typography elements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.28;
+}
+
+h1 { font-size: 1.75rem; letter-spacing: -0.02em; }
+h2 { font-size: 1.4rem; letter-spacing: -0.015em; }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1.05rem; }
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Optimal line length for readable prose on wide screens */
+.prose, p.lead, .lesson-step-card p {
+  max-width: 80ch;
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+pre {
+  background: #0F172A;
+  color: #F8FAFC;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  max-width: 100%;
+}
+
+code:not(pre code) {
+  background: var(--bg-interactive);
+  color: var(--accent-hover);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-size: 0.88em;
+}
+
+ul, ol {
+  padding-left: 1.4rem;
+  color: var(--text-secondary);
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+/* Accessibility Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backend Journey — 32-Week Engineering Companion</title>
+  <meta name="description" content="Personal 32-Week Backend Engineering Learning & Career Development Platform. C#, ASP.NET Core, SQL Server, and DSA.">
+  <meta name="theme-color" content="#0D9488">
+
+  <!-- PWA Manifest & App Icons -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.svg">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <div id="app-root">
+    <!-- Primary App Header -->
+    <header class="app-header">
+      <a href="#dashboard" class="brand-wrapper" aria-label="Backend Journey Home">
+        <img src="assets/icons/favicon.svg" alt="App Logo" class="brand-logo">
+        <div class="brand-text">
+          <span>Backend Journey</span>
+          <span class="brand-subtitle">32-Week Engineering Companion</span>
+        </div>
+      </a>
+
+      <!-- Desktop 6 Main Navigation Links -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="#dashboard" class="nav-link active">
+          <span>🏠</span> Home
+        </a>
+        <a href="#roadmap" class="nav-link">
+          <span>🗺️</span> Roadmap
+        </a>
+        <a href="#practice" class="nav-link">
+          <span>💻</span> Practice
+        </a>
+        <a href="#projects" class="nav-link">
+          <span>🏗️</span> Projects
+        </a>
+        <a href="#career" class="nav-link">
+          <span>💼</span> Career
+        </a>
+        <a href="#mentor" class="nav-link ai-mentor-nav">
+          <span>✨</span> AI Mentor
+        </a>
+      </nav>
+
+      <!-- Header Tools & Continue Action -->
+      <div class="header-actions">
+        <a href="#roadmap" class="btn-continue-header" id="header-continue-btn">
+          <span>Resume Topic</span> ▶
+        </a>
+
+        <!-- More Tools Dropdown (Replaces Bulky Second Row) -->
+        <div class="tools-menu-wrapper">
+          <button type="button" class="tools-menu-btn" id="tools-menu-btn" aria-haspopup="true" aria-expanded="false" title="Secondary practice & settings tools">
+            <span>More Tools</span> ▾
+          </button>
+          <div class="tools-dropdown-menu" id="tools-dropdown-menu" role="menu">
+            <a href="#quiz" class="tools-menu-item" role="menuitem">
+              <span>🎯</span> AI Assessment & Quiz Lab
+            </a>
+            <a href="#communication" class="tools-menu-item" role="menuitem">
+              <span>🎙️</span> Speaking & Communication
+            </a>
+            <a href="#weekly-review" class="tools-menu-item" role="menuitem">
+              <span>📅</span> Sunday Weekly Review
+            </a>
+            <a href="#resources" class="tools-menu-item" role="menuitem">
+              <span>📚</span> Verified Resources
+            </a>
+            <a href="#go-track" class="tools-menu-item" role="menuitem">
+              <span>🐹</span> Optional Go Track
+            </a>
+            <hr style="border: 0; border-top: 1px solid var(--border-light); margin: 4px 0;">
+            <a href="#settings" class="tools-menu-item" role="menuitem">
+              <span>💾</span> Local Backups & Export
+            </a>
+            <a href="#settings" class="tools-menu-item" role="menuitem">
+              <span>⚙️</span> App Settings
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dynamic Main Content Container (Full Width Responsive Workspace) -->
+    <main class="main-content" id="main-content" role="main">
+      <!-- Views mounted dynamically via Router -->
+      <div style="padding: 48px; text-align: center; color: var(--text-muted);">
+        Initializing 32-Week Learning Companion...
+      </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation Bar (Phones / Narrow Screens) -->
+    <nav class="mobile-nav-bar" aria-label="Mobile Navigation">
+      <a href="#dashboard" class="mobile-nav-link active">
+        <span style="font-size: 1.1rem;">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="#roadmap" class="mobile-nav-link">
+        <span style="font-size: 1.1rem;">🗺️</span>
+        <span>Roadmap</span>
+      </a>
+      <a href="#practice" class="mobile-nav-link">
+        <span style="font-size: 1.1rem;">💻</span>
+        <span>Practice</span>
+      </a>
+      <a href="#mentor" class="mobile-nav-link">
+        <span style="font-size: 1.1rem;">✨</span>
+        <span>Mentor</span>
+      </a>
+      <a href="#projects" class="mobile-nav-link">
+        <span style="font-size: 1.1rem;">🏗️</span>
+        <span>Projects</span>
+      </a>
+      <a href="#career" class="mobile-nav-link">
+        <span style="font-size: 1.1rem;">💼</span>
+        <span>Career</span>
+      </a>
+    </nav>
+
+    <!-- Application Footer -->
+    <footer class="app-footer">
+      <div>
+        <strong>32-Week Backend Engineering & Career Development Platform</strong> • Local-first, privacy-respecting companion.
+      </div>
+      <div>
+        All progress is stored locally in your browser's IndexedDB. No cloud database or external tracking.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Main ES Module Entry Point -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
